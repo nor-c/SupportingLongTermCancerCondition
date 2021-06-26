@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bmr_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C678D0EA"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/blue"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/bg_top_header"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/ic_bg_topheader_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bmr_textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/courgette"
+        android:gravity="center_horizontal"
+        android:text="Weight"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/bmr_surgery_date_tv"
+        app:layout_constraintStart_toStartOf="@+id/bmr_surgery_date_tv"
+        app:layout_constraintTop_toBottomOf="@+id/bmr_surgery_date_tv" />
+
+    <EditText
+        android:id="@+id/bmr_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="6"
+        android:inputType="number|numberDecimal"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bmr_textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.239"
+        app:layout_constraintStart_toEndOf="@+id/bmr_textView2"
+        app:layout_constraintTop_toBottomOf="@+id/bmr_dateTv" />
+
+    <TextView
+        android:id="@+id/bmr_textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/courgette"
+        android:gravity="center_horizontal"
+        android:text="Height"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/bmr_textView2"
+        app:layout_constraintTop_toBottomOf="@+id/bmr_textView2"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/bmr_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="6"
+        android:inputType="number|numberDecimal"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bmr_textView6"
+        app:layout_constraintStart_toStartOf="@+id/bmr_height"
+        app:layout_constraintTop_toTopOf="@+id/bmr_textView6"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/bmr_textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/courgette"
+        android:gravity="center_horizontal"
+        android:text="Age"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/bmr_textView4"
+        app:layout_constraintTop_toBottomOf="@+id/bmr_textView4"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/bmr_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="6"
+        android:inputType="number|numberDecimal"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bmr_textView4"
+        app:layout_constraintStart_toStartOf="@+id/bmr_weight"
+        app:layout_constraintTop_toTopOf="@+id/bmr_textView4" />
+
+
+    <Button
+        android:id="@+id/male_button"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="76dp"
+        android:backgroundTint="#3F51B5"
+        android:text="@string/male"
+        app:layout_constraintEnd_toStartOf="@+id/female_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calc"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/female_button"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginEnd="54dp"
+        android:layout_toEndOf="@+id/male_button"
+        android:backgroundTint="#3F51B5"
+        android:text="@string/female"
+        app:layout_constraintBottom_toBottomOf="@+id/male_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/male_button"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/no_exercise_btn"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="3dp"
+        android:alpha="0.7"
+        android:backgroundTint="#2196F3"
+        android:text="No exercise"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/exercise_btn_one"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/male_button"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/exercise_btn_two"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_toEndOf="@+id/exercise_btn_one"
+        android:backgroundTint="#1A6EB1"
+        android:text="3-5 Days/Week"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/exercise_btn_one"
+        app:layout_constraintEnd_toStartOf="@+id/exercise_btn_three"
+        app:layout_constraintStart_toEndOf="@+id/exercise_btn_one"
+        app:layout_constraintTop_toTopOf="@+id/exercise_btn_one"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/exercise_btn_three"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_toEndOf="@+id/exercise_btn_two"
+        android:backgroundTint="#0D436E"
+        android:text="6-7 Days/Week"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/exercise_btn_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/exercise_btn_two"
+        app:layout_constraintTop_toTopOf="@+id/exercise_btn_two"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/exercise_btn_one"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="3dp"
+        android:layout_toEndOf="@+id/no_exercise_btn"
+        android:backgroundTint="#03A9F4"
+        android:text="1-3 Day(s)/Week"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/no_exercise_btn"
+        app:layout_constraintEnd_toStartOf="@+id/exercise_btn_two"
+        app:layout_constraintStart_toEndOf="@+id/no_exercise_btn"
+        app:layout_constraintTop_toTopOf="@+id/no_exercise_btn"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints,SmallSp" />
+
+    <Button
+        android:id="@+id/calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#773C069C"
+        android:gravity="center_vertical"
+        android:onClick="calculateBMR"
+        android:text="@string/calculate_bmr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmr_age"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/bmr_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/courgette"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmr_result_title"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bmr_bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/top_menu" />
+
+    <TextView
+        android:id="@+id/title_bmrTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/courgette"
+        android:text="MBR Calculator"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bmr_weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bmr_save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Save"
+        app:layout_constraintBottom_toTopOf="@+id/bmr_bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmr_feedback_tv" />
+
+    <TextView
+        android:id="@+id/bmr_surgery_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/courgette"
+        android:text="@string/surgery_date"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_bmrTv" />
+
+    <ImageView
+        android:id="@+id/bmr_pickDateBtn"
+        android:layout_width="35dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/calendar"
+        app:layout_constraintBottom_toBottomOf="@+id/bmr_surgery_date_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bmr_surgery_date_tv"
+        app:layout_constraintTop_toTopOf="@+id/bmr_surgery_date_tv" />
+
+    <TextView
+        android:id="@+id/bmr_dateTv"
+        android:layout_width="126dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="103dp"
+        android:layout_marginBottom="108dp"
+        android:fontFamily="@font/courgette"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bmr_surgery_date_tv"
+        app:layout_constraintEnd_toEndOf="@+id/bmr_weight"
+        app:layout_constraintHorizontal_bias="0.369"
+        app:layout_constraintStart_toStartOf="@+id/bmr_weight"
+        app:layout_constraintTop_toTopOf="@+id/bmr_surgery_date_tv" />
+
+    <TextView
+        android:id="@+id/bmr_result_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/courgette"
+        android:text="Your BMR"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/no_exercise_btn" />
+
+    <TextView
+        android:id="@+id/bmr_feedback_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/courgette"
+        android:text="Text"
+        android:textStyle="bold"
+
+        android:textSize="25sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmr_result" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

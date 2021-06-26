@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gardient_login"
+    tools:context=".ui.HomeActivity">
+
+    <View
+        android:id="@+id/bg_top_header"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/ic_bg_topheader_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/courgette"
+        android:text="@string/choose_one_of_the_options"
+        android:textAlignment="center"
+        android:textColor="@color/darkGray"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_user_name" />
+
+    <ImageButton
+        android:id="@+id/home_bmr_img"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/bmr"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/home_recipes_img"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/plate"
+        app:layout_constraintBottom_toBottomOf="@+id/home_bmr_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/home_bmr_img"
+        app:layout_constraintTop_toTopOf="@+id/home_bmr_img"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/home_chat_img"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/chat"
+        app:layout_constraintEnd_toEndOf="@+id/home_bmr_img"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/home_bmr_img"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/home_history_img"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/diagram"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/courgette"
+        android:text="@string/check_your_basal_metabolic_rate"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/home_bmr_img"
+        app:layout_constraintStart_toStartOf="@+id/home_bmr_img"
+        app:layout_constraintTop_toBottomOf="@+id/home_bmr_img" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/courgette"
+        android:text="@string/find_your_favourite_recipes"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/home_recipes_img"
+        app:layout_constraintStart_toStartOf="@+id/home_recipes_img"
+        app:layout_constraintTop_toBottomOf="@+id/home_recipes_img" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/courgette"
+        android:text="@string/chat_with_friends"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/home_chat_img"
+        app:layout_constraintStart_toStartOf="@+id/home_chat_img"
+        app:layout_constraintTop_toBottomOf="@+id/home_chat_img" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/courgette"
+        android:text="@string/history_of_dietary_behaviour"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/home_history_img"
+        app:layout_constraintStart_toStartOf="@+id/home_history_img"
+        app:layout_constraintTop_toBottomOf="@+id/home_history_img" />
+
+    <ImageView
+        android:id="@+id/home_dietary_img"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/dietary"
+        app:layout_constraintBottom_toBottomOf="@+id/home_chat_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/home_chat_img"
+        app:layout_constraintTop_toTopOf="@+id/home_chat_img"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/courgette"
+        android:text="@string/enter_dietary_behaviour"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/home_dietary_img"
+        app:layout_constraintStart_toStartOf="@+id/home_dietary_img"
+        app:layout_constraintTop_toBottomOf="@+id/home_dietary_img" />
+
+    <TextView
+        android:id="@+id/home_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        android:fontFamily="@font/courgette"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="27sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bg_top_header" />
+</androidx.constraintlayout.widget.ConstraintLayout>

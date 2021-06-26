@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue"
+    tools:context=".ui.calorie.DietaryActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/blue"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/bg_top_header"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/ic_bg_topheader_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dietary_activity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/courgette"
+        android:text="Daily Dietary and Physical Activity Behaviour"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bg_top_header" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/dietary_bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/top_menu" />
+
+
+    <TextView
+        android:id="@+id/overall_general_health_tv"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/courgette"
+        android:gravity="center_horizontal"
+        android:text="Suggested daily calories"
+        android:textColor="#21387C"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg_top_header" />
+
+    <TextView
+        android:id="@+id/overall_general_health_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/courgette"
+        android:text=""
+        android:textColor="#21387C"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/overall_general_health_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toEndOf="@+id/overall_general_health_tv"
+        app:layout_constraintTop_toBottomOf="@+id/bg_top_header" />
+
+    <TextView
+        android:id="@+id/calorie_eat_tv"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/courgette"
+        android:gravity="center_horizontal"
+        android:text="Calories eaten"
+        android:textColor="#243161"
+
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/overall_general_health_tv" />
+
+
+
+    <TextView
+        android:id="@+id/after_surgery_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/courgette"
+        android:gravity="center_horizontal"
+        android:text="Days since Your surgery"
+        android:textColor="#243161"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dietary_activity_tv" />
+
+    <TextView
+        android:id="@+id/after_surgery_time_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:ems="6"
+        android:inputType="number|numberDecimal"
+        android:textAlignment="center"
+        android:textColor="#1F2C5A"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/after_surgery_time_tv"
+        app:layout_constraintStart_toStartOf="@+id/after_surgery_time_tv"
+        app:layout_constraintTop_toBottomOf="@+id/after_surgery_time_tv" />
+
+    <TextView
+        android:id="@+id/physical_activity_tv"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/courgette"
+        android:gravity="center_horizontal"
+        android:text="Physical Activity"
+        android:textColor="#243161"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calorie_eat_tv" />
+
+<!--    <Button-->
+<!--        android:id="@+id/dietary_save_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:text="Save to History"-->
+<!--        app:backgroundTint="#387681"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/dietary_bottomNavigationView"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <TextView
+        android:id="@+id/result_calorie_eaten_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/courgette"
+        android:text=""
+        android:textColor="#21387C"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/overall_general_health_spinner"
+        app:layout_constraintTop_toTopOf="@+id/calorie_eat_tv" />
+
+    <TextView
+        android:id="@+id/physical_activity_result_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/courgette"
+        android:text=""
+        android:textColor="#21387C"
+
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/result_calorie_eaten_textView"
+        app:layout_constraintTop_toTopOf="@+id/physical_activity_tv" />
+
+    <TextView
+        android:id="@+id/dietary_result_calculated"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/courgette"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#21387C"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/physical_activity_tv" />
+
+    <ImageView
+        android:id="@+id/happy_img"
+        android:layout_width="86dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/physical_activity_tv"
+        app:srcCompat="@drawable/happy" />
+
+    <ImageView
+        android:id="@+id/sad_img"
+        android:layout_width="109dp"
+        android:layout_height="85dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/physical_activity_tv"
+        app:srcCompat="@drawable/sad" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

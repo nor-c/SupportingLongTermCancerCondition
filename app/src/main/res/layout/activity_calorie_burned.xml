@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue"
+    tools:context=".ui.CalorieBurnedActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/blue"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/bg_top_header"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/ic_bg_topheader_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/physical_activity_result_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/courgette"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/dark"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_top_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/physical_activity_activity_tv" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/feedbck_calorie_result_tv"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="rr"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/calorie_result_tv"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/calorie_result_tv"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/calorie_result_tv" />-->
+
+    <TextView
+        android:id="@+id/physical_activity_activity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/courgette"
+        android:text="Today's Calories Burned by Physical Activity."
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bg_top_header" />
+
+
+    <TextView
+        android:id="@+id/Wwlking_intensity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/courgette"
+        android:text="Walking Intensity"
+        android:textAlignment="center"
+        android:textColor="#295E2B"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg_top_header" />
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/slow_checkBox"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:text="Slow"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/Wwlking_intensity_tv" />-->
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/fast_checkBox"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:text="Fast"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/slow_checkBox"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/slow_checkBox" />-->
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/normal_checkBox"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginEnd="292dp"-->
+<!--        android:layoutDirection="rtl"-->
+<!--        android:text="Normal"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/Wwlking_intensity_tv" />-->
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/very_fast_checkBox"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:text="Very Fast"-->
+<!--        android:layoutDirection="rtl"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/normal_checkBox"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/normal_checkBox" />-->
+
+    <!--    <CheckBox-->
+<!--        android:id="@+id/min30_checkBox"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:text="30 minutes"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/time_tv" />-->
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/min90_checkBox"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:text="1.5 hour"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/min30_checkBox"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/min30_checkBox" />-->
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/min120_checkBox"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_marginEnd="56dp"-->
+<!--        android:text="2 hours"-->
+<!--        android:layoutDirection="rtl"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/min60_checkBox"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/min60_checkBox" />-->
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/min60_checkBox"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:layout_marginEnd="292dp"-->
+<!--        android:layoutDirection="rtl"-->
+<!--        android:text="1 hour"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/time_tv" />-->
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:fontFamily="@font/courgette"
+        android:text="Walking time in Hours"
+        android:textAlignment="center"
+        android:textColor="#295E2B"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Wwlking_intensity_tv" />
+
+    <Button
+        android:id="@+id/walking_save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="99dp"
+        android:layout_marginBottom="8dp"
+        android:text="Save"
+        app:backgroundTint="@color/green"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_tv"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/slow_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="4dp"
+
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Wwlking_intensity_tv"
+        app:srcCompat="@drawable/slow" />
+
+    <TextView
+        android:id="@+id/walking_intensity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/courgette"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="35sp"
+        android:textColor="@color/dark"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Wwlking_intensity_tv" />
+
+    <ImageView
+        android:id="@+id/normal_img_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/slow_img"
+        app:layout_constraintStart_toEndOf="@+id/slow_img"
+        app:layout_constraintTop_toTopOf="@+id/slow_img"
+        app:srcCompat="@drawable/normal" />
+
+    <ImageView
+        android:id="@+id/fast_img_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/normal_img_view"
+        app:layout_constraintStart_toEndOf="@+id/normal_img_view"
+        app:layout_constraintTop_toTopOf="@+id/normal_img_view"
+        app:srcCompat="@drawable/fast" />
+
+    <ImageView
+        android:id="@+id/veryfast_img_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fast_img_view"
+        app:layout_constraintStart_toEndOf="@+id/fast_img_view"
+        app:layout_constraintTop_toTopOf="@+id/fast_img_view"
+        app:srcCompat="@drawable/veryfast" />
+
+    <ImageView
+        android:id="@+id/min30_img_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_tv"
+        app:srcCompat="@drawable/min30" />
+
+    <ImageView
+        android:id="@+id/min60_img_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/min30_img_tv"
+        app:layout_constraintStart_toEndOf="@+id/min30_img_tv"
+        app:layout_constraintTop_toTopOf="@+id/min30_img_tv"
+        app:srcCompat="@drawable/min60" />
+
+    <ImageView
+        android:id="@+id/min90_img_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/min60_img_tv"
+        app:layout_constraintStart_toEndOf="@+id/min60_img_tv"
+        app:layout_constraintTop_toTopOf="@+id/min60_img_tv"
+        app:srcCompat="@drawable/min90" />
+
+    <ImageView
+        android:id="@+id/min120_img_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/min90_img_tv"
+        app:layout_constraintStart_toEndOf="@+id/min90_img_tv"
+        app:layout_constraintTop_toTopOf="@+id/min90_img_tv"
+        app:srcCompat="@drawable/min120" />
+
+    <ImageView
+        android:id="@+id/min150_img_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/min120_img_tv"
+        app:layout_constraintStart_toEndOf="@+id/min120_img_tv"
+        app:layout_constraintTop_toTopOf="@+id/min120_img_tv"
+        app:srcCompat="@drawable/min150" />
+
+    <ImageView
+        android:id="@+id/min180_img_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/min150_img_tv"
+        app:layout_constraintStart_toEndOf="@+id/min150_img_tv"
+        app:layout_constraintTop_toTopOf="@+id/min150_img_tv"
+        app:srcCompat="@drawable/min180" />
+
+    <TextView
+        android:id="@+id/walking_time_hours_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/courgette"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="35sp"
+        android:textColor="@color/dark"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">Spoc_v2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recipes_fragment">Recipes</string>
+    <string name="favorite_recipes">Favorite</string>
+    <string name="recipes_home_button">Home</string>
+    <string name="meal_type">Meal Type</string>
+    <string name="main_course">Main Course</string>
+    <string name="side_dish">Side Dish</string>
+    <string name="dessert">Dessert</string>
+    <string name="appetizer">Appetizer</string>
+    <string name="salad">Salad</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="soup">Soup</string>
+    <string name="beverage">Beverage</string>
+    <string name="sauce">Sauce</string>
+    <string name="marinade">Marinade</string>
+    <string name="finger_food">Finger Food</string>
+    <string name="snack">Snack</string>
+    <string name="drink">Drink</string>
+    <string name="diet_type">Diet Type</string>
+    <string name="gluten_free">Gluten Free</string>
+    <string name="ketogenic">Ketogenic</string>
+    <string name="vegetarian">Vegetarian</string>
+    <string name="vegan">Vegan</string>
+    <string name="pescetarian">Pescetarian</string>
+    <string name="bread">Bread</string>
+    <string name="paleo">Paleo</string>
+    <string name="primal">Primal</string>
+    <string name="whole30">Whole30</string>
+    <string name="apply">Apply</string>
+    <string name="search">Search</string>
+    <string name="cheap">Cheap</string>
+    <string name="healthy">Healthy</string>
+    <string name="dairy_free">Dairy Free</string>
+    <string name="svae_to_favorites">Svae To Favorites</string>
+    <string name="no_favorite_recipes">No Favorite Recipes</string>
+    <string name="delete_favorite_menu">Delete Favorite Menu</string>
+    <string name="delete_all">Delete All</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+
+    <string name="very_severely_underweight">Very severely underweight</string>
+    <string name="severely_underweight">Severely underweight</string>
+    <string name="underweight">Underweight</string>
+    <string name="normal">Normal</string>
+    <string name="overweight">Overweight</string>
+    <string name="obese_class_i">Obese class I</string>
+    <string name="obese_class_ii">Obese class II</string>
+    <string name="obese_class_iii">Obese class III</string>
+    <string name="calculate_bmr">Calculate BMR</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="choose_one_of_the_options">Choose one of the options</string>
+    <string name="check_your_basal_metabolic_rate">Check your basal metabolic rate</string>
+    <string name="find_your_favourite_recipes">Find favourite recipes</string>
+    <string name="chat_with_friends">Chat with friends</string>
+    <string name="history_of_dietary_behaviour">History of dietary behaviour</string>
+    <string name="enter_dietary_behaviour">Enter dietary behaviour</string>
+    <string name="home">Home</string>
+    <string name="food">Food</string>
+    <string name="history">History</string>
+    <string name="chat">Chat</string>
+    <string name="sign_out">Sign Out</string>
+
+    <string name="selected_item">Selected: </string>
+    <string name="surgery_date">Surgery Date</string>
+
+    <string-array name="overall_general_health">
+        <item>Select</item>
+        <item>Physical</item>
+        <item>Emotional</item>
+        <item>Social</item>
+        <item>Spiritual</item>
+        <item>Intellectual</item>
+    </string-array>
+
+    <string-array name="physical_behaviour">
+        <item>Select</item>
+        <item>No Exercise</item>
+        <item>1–3 Day(s)/Week</item>
+        <item>3–5 Days/Week</item>
+        <item>6–7 Days/Week</item>
+    </string-array>
+
+    <string-array name="emotions">
+        <item>Select</item>
+        <item>Joy</item>
+        <item>Sadness</item>
+        <item>Fear</item>
+        <item>Disgust</item>
+        <item>Anger</item>
+    </string-array>
+
+    <string-array name="caloriesEaten">
+        <item>Select</item>
+        <item>Below 1500</item>
+        <item>1500–2000</item>
+        <item>2000–2500</item>
+        <item>2500-3000</item>
+        <item>More than 3000</item>
+    </string-array>
+</resources>

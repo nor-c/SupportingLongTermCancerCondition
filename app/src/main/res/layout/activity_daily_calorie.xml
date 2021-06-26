@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue"
+    tools:context=".ui.CalorieEatenActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/blue"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/bg_top_header"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/ic_bg_topheader_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/calorie_result_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/courgette"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_top_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dietary_activity_tv" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/feedbck_calorie_result_tv"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="rr"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/calorie_result_tv"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/calorie_result_tv"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/calorie_result_tv" />-->
+
+    <TextView
+        android:id="@+id/dietary_activity_tv"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/courgette"
+        android:text="Today's meals and Calorie Eaten"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bg_top_header" />
+
+
+    <TextView
+        android:id="@+id/breakfast_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/courgette"
+        android:text="Breakfast"
+        android:textAlignment="center"
+        android:textColor="#295E2B"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg_top_header" />
+
+    <CheckBox
+        android:id="@+id/full_breakfast_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="24dp"
+        android:text="Full Breakfast"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breakfast_tv" />
+
+    <CheckBox
+        android:id="@+id/half_breakfast_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Half of Breakfast"
+        app:layout_constraintStart_toStartOf="@+id/full_breakfast_checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/full_breakfast_checkBox" />
+
+    <CheckBox
+        android:id="@+id/twotoast_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="228dp"
+        android:layoutDirection="rtl"
+        android:text="Two toasts and Jam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breakfast_tv" />
+
+    <CheckBox
+        android:id="@+id/cereals_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layoutDirection="rtl"
+        android:text="Cereals"
+        app:layout_constraintStart_toStartOf="@+id/twotoast_checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/twotoast_checkBox" />
+
+    <TextView
+        android:id="@+id/lunch_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/courgette"
+        android:text="Lunch"
+        android:textAlignment="center"
+        android:textColor="#295E2B"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/half_breakfast_checkBox" />
+
+    <CheckBox
+        android:id="@+id/soup_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="24dp"
+        android:text="Soup with bread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lunch_tv" />
+
+    <CheckBox
+        android:id="@+id/fishchips_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Fish and chips"
+        app:layout_constraintStart_toStartOf="@+id/soup_checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/soup_checkBox" />
+
+    <CheckBox
+        android:id="@+id/min120_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="56dp"
+        android:layoutDirection="rtl"
+        android:text="Sandwich"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rollsausages_checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/rollsausages_checkBox" />
+
+    <CheckBox
+        android:id="@+id/rollsausages_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="268dp"
+        android:layoutDirection="rtl"
+        android:text="Sausages roll"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lunch_tv" />
+
+    <TextView
+        android:id="@+id/dinner_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/courgette"
+        android:text="Dinner"
+        android:textAlignment="center"
+        android:textColor="#295E2B"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fishchips_checkBox" />
+
+    <CheckBox
+        android:id="@+id/meatvegetables_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="24dp"
+        android:text="Meat and two vegetables"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dinner_tv" />
+
+    <CheckBox
+        android:id="@+id/chickendish_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Chicken dish"
+        app:layout_constraintStart_toStartOf="@+id/meatvegetables_checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/meatvegetables_checkBox" />
+
+    <CheckBox
+        android:id="@+id/steakchips_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="256dp"
+        android:layoutDirection="rtl"
+        android:text="Steak and chips"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dinner_tv" />
+
+    <CheckBox
+        android:id="@+id/pastasauce_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layoutDirection="rtl"
+        android:text="Pasta with sauce"
+
+        app:layout_constraintStart_toStartOf="@+id/steakchips_checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/steakchips_checkBox" />
+
+    <TextView
+        android:id="@+id/snack_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/courgette"
+        android:text="Snacks"
+        android:textAlignment="center"
+        android:textColor="#295E2B"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chickendish_checkBox" />
+
+
+    <CheckBox
+        android:id="@+id/snack1_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="8dp"
+        android:text="Granola bar "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/snack_tv" />
+
+    <CheckBox
+        android:id="@+id/marsBar_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Mars bar "
+        app:layout_constraintBottom_toBottomOf="@+id/snack1_checkBox"
+        app:layout_constraintStart_toEndOf="@+id/snack1_checkBox"
+        app:layout_constraintTop_toTopOf="@+id/snack1_checkBox" />
+
+    <CheckBox
+        android:id="@+id/crips_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Crisps "
+        app:layout_constraintBottom_toBottomOf="@+id/marsBar_checkBox"
+        app:layout_constraintStart_toEndOf="@+id/marsBar_checkBox"
+        app:layout_constraintTop_toTopOf="@+id/marsBar_checkBox" />
+
+    <CheckBox
+        android:id="@+id/iceCream_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="4dp"
+        android:text="Ice cream "
+        app:layout_constraintBottom_toBottomOf="@+id/crips_checkBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/crips_checkBox"
+        app:layout_constraintTop_toTopOf="@+id/crips_checkBox" />
+
+    <Button
+        android:id="@+id/calories_save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Save"
+        app:backgroundTint="#2A7998"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/snack1_checkBox"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
